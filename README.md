@@ -1,4 +1,7 @@
 # SimpleStateMachine
+
+[![Build Status][image-1]][1] [![Swift Version][image-2]][2]
+
 A simple Swift state machine package
 
 ### How to use
@@ -56,4 +59,8 @@ machine = SimpleStateMachine<MockMachineDelegate>(initialState: .ready, delegate
 machine.state = .doSomething
 ```
 
+[1]:    https://travis-ci.org/amorican/SimpleStateMachine
+[2]:    https://swift.org "Swift"
 
+[image-1]:  https://travis-ci.org/amorican/SimpleStateMachine.svg
+[image-2]:  https://img.shields.io/badge/swift-version%203-blue.svg
