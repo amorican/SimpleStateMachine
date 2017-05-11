@@ -2,9 +2,9 @@
 A simple Swift state machine package
 
 ### How to use
-Define a class that implements the `SimpleStateMachineDelegate` protocol:
+Define a class that implements the `SimpleStateMachineDelegate` protocol with:
 
-#### An enum to define the states of the machine:
+1. An enum to define the states of the machine:
 ```swift
 public enum MockMachineDelegateState: SimpleStateMachineState, Equatable {
     case ready, doingSomething
@@ -25,12 +25,12 @@ public enum MockMachineDelegateState: SimpleStateMachineState, Equatable {
 }
 ```
 
-### The associated type for the state:
+2. The associated type for the state:
 ```swift
 public typealias StateType = MockMachineDelegateState
 ```
 
-### The method in which you implement your code for when the machine transitions to another state:
+3. The method in which you implement your code for when the machine transitions to another state:
 ```swift
 public func didTransition(from: StateType, to: StateType) {
     
@@ -48,11 +48,12 @@ public func didTransition(from: StateType, to: StateType) {
 }
 ```
 
-### The instantiate a machine:
+#### The instantiate a machine:
 ```swift
 let machineDelegate = MockMachineDelegate()
 machine = SimpleStateMachine<MockMachineDelegate>(initialState: .ready, delegate: machineDelegate)
 // Let's do something
 machine.state = .doSomething
+```
 
 
