@@ -43,7 +43,7 @@ public protocol SimpleStateMachineState {
      The transition rules from one state to another are defined in the enum itself through the implementation of this method.
      - Parameter from: The state from which the machine wants to transition.
      - Parameter to: The state to which the machine proposes to transition.
-     - Returns: A Bool indicating whether the machine is allowed to switch states.
+     - Returns: A `Bool` indicating whether the machine is allowed to switch states.
      */
     func canTransition(from: Self, to: Self) -> Bool
 }
